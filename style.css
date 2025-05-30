@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #00feba, #5b548a);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.container {
+    background-color: #fff;
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+    margin: 0 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.container h1 {
+    font-size: clamp(24px, 5vw, 36px);
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 15px;
+    display: inline-block;
+    margin: 0;
+}
+
+.container h1:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+    border-radius: 5px;
+    background-color: #00feba;
+}
+
+.container button {
+    border: none;
+    outline: none;
+    background: linear-gradient(135deg, #00feba, #5b548a);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+.container button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+.container button:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.palette-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(130px,1fr));
+    gap: 10px;
+    width: 100%;
+}
+
+.color-box {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.color-box:hover {
+    transform: translateY(-5px);
+}
+
+.color-box .color {
+    height: 100px;
+    cursor: pointer;
+}
+
+.color-box-content {
+    padding: 10px;
+    background-color: #fff;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.color-box-content .color-hex {
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.color-box-content .copy-btn {
+    color: #5b548a;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+}
+
+.color-box-content .copy-btn:hover {
+    color: #00feba;
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 20px 25px;
+        margin: 0 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        padding: 15px 20px;
+        margin: 0 5px;
+    }
+    
+    .container h1 {
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+    }
+}
+
+
+
